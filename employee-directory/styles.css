@@ -1,0 +1,138 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+thead {
+  background-color: #007BFF;
+  color: #fff;
+}
+
+button {
+  padding: 5px 10px;
+  margin: 2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:nth-child(1) {
+  background-color: #28a745;
+  color: white;
+}
+
+button:nth-child(2) {
+  background-color: #dc3545;
+  color: white;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.controls input,
+.controls select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#filter-section {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #eef;
+  border: 1px solid #aad;
+  border-radius: 6px;
+}
+
+.hidden {
+  display: none;
+}
+
+#pagination {
+  margin-top: 15px;
+  text-align: center;
+}
+
+#pagination button {
+  background-color: #007BFF;
+  color: white;
+  margin: 3px;
+  padding: 8px 12px;
+}
+
+@media screen and (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 15px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+
+  td {
+    position: relative;
+    padding-left: 50%;
+    border: none;
+  }
+
+  td::before {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  td:nth-of-type(1)::before { content: "Emp ID"; }
+  td:nth-of-type(2)::before { content: "First"; }
+  td:nth-of-type(3)::before { content: "Last"; }
+  td:nth-of-type(4)::before { content: "Email"; }
+  td:nth-of-type(5)::before { content: "Department"; }
+  td:nth-of-type(6)::before { content: "Role"; }
+  td:nth-of-type(7)::before { content: "Actions"; }
+
+  .controls {
+    flex-direction: column;
+  }
+}
